@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 function App(props) {
   return (
+    <div className='yash'>
     <div className="cards">
       <div className="card">
         <img src={props.imgSrc} alt="myPic" className="card__img" />
@@ -13,6 +14,7 @@ function App(props) {
           </a>
         </div>
       </div>
+    </div>
     </div>
   );
 }
