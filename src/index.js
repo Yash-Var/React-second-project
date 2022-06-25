@@ -1,23 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-function Cards(props) {
-  return (
-    <div className="cards">
-      <div className="card">
-        <img src={props.imgSrc} alt="myPic" className="card__img" />
-        <div className="card__info">
-          <span className="card__category">{props.title}</span>
-          <h3 className="card__title">{props.Name}</h3>
-          <a href={props.href} target="_blank">
-            <button>Watch Now</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-ReactDOM.render(<>
-  <Cards title="A Netflix Original Series" Name="Frame Game" imgSrc="http://surl.li/cguja" href="https://www.netflix.com/in/title/81133092" />
-</>, document.getElementById("root"));
+import App from "./App.js";
+import './index.css';
+ReactDOM.render(
+  <>
+  <h1 className="heading_style">List of 5 Netflix Series </h1>
+    <App
+      title="A Netflix Original Series"
+      Name="Frame Game"
+      imgSrc="http://surl.li/cguja"
+      href="https://www.netflix.com/in/title/81133092"
+    />
+    <App
+      title="A Netflix Original Series"
+      Name="Bard of Blood"
+      imgSrc="http://shorturl.at/dmsFX"
+      href="https://www.netflix.com/in/title/80225885"
+    />
+    <App
+      title="A Netflix Original Series"
+      Name="Sacred Games"
+      imgSrc="http://shorturl.at/rvxBJ"
+      href="https://www.netflix.com/in/title/80115328"
+    />
+  </>,
+  document.getElementById("root")
+);
