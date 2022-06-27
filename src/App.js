@@ -1,21 +1,28 @@
-import React from 'react';
-import './index.css';
-function App(props) {
-  return (
-    <div className='yash'>
-    <div className="cards">
-      <div className="card">
-        <img src={props.imgSrc} alt="myPic" className="card__img" />
-        <div className="card__info">
-          <span className="card__category">{props.title}</span>
-          <h3 className="card__title">{props.Name}</h3>
-          <a href={props.href} target="_blank">
-            <button>Watch Now</button>
-          </a>
+import React from "react";
+import "./container.css";
+import Cards from "./Cards.js";
+
+import sdata from "./Sdata.js";
+
+// import './index.css';
+const App = () => (
+  <>
+    <h1 className="heading_style">List Some Netflix Series </h1>
+
+        <div class="right-container">
+    {sdata.map((val) => {
+      return (
+        <Cards
+          key={val.id}
+          title={val.title}
+          Name={val.sname}
+          imgSrc={val.imgsrc}
+          href={val.links}
+        />
+      );
+    })}
         </div>
-      </div>
-    </div>
-    </div>
-  );
-}
+   
+  </>
+);
 export default App;
